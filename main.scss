@@ -1,0 +1,32 @@
+$base-color: grey;
+html,
+body {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+
+  .rose-wrapper {
+    height: 100%;
+    background: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .rose-petal {
+      height: 20px;
+      width: 1px;
+      margin: 3px;
+      background: white;
+      border: 2px solid;
+    }
+  }
+}
+@for $i from 6 through 12 {
+  .rose-petal:nth-child(#{$i}) {
+    background-color: darken($base-color, $i * 3%) !important;
+  }
+}
+@for $i from 1 through 12 {
+  .rose-petal:nth-child(#{$i}) {
+    transform: rotate($i * 30deg);
+  }
+}
