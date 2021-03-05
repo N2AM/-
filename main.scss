@@ -11,7 +11,10 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 0px;
+    margin: 0px;
     .rose-petal {
+      position: relative;
       height: 20px;
       width: 1px;
       margin: 3px;
@@ -20,13 +23,45 @@ body {
     }
   }
 }
-@for $i from 6 through 12 {
+@for $i from 1 through 12 {
   .rose-petal:nth-child(#{$i}) {
     background-color: darken($base-color, $i * 3%) !important;
   }
 }
 @for $i from 1 through 12 {
   .rose-petal:nth-child(#{$i}) {
-    transform: rotate($i * 30deg);
+    transform: rotate($i * 30deg) skewY(-60deg);
   }
+}
+.rose-petal:nth-child(3),
+.rose-petal:nth-child(9) {
+  top: 25px;
+}
+.rose-petal:nth-child(4),
+.rose-petal:nth-child(8) {
+  top: 13px;
+}
+.rose-petal:nth-child(2),
+.rose-petal:nth-child(10) {
+  top: 45px;
+}
+.rose-petal:nth-child(2) {
+  left: 10px;
+}
+.rose-petal:nth-child(10) {
+  left: -10px;
+}
+.rose-petal:nth-child(1),
+.rose-petal:nth-child(11) {
+  top: 60px;
+}
+.rose-petal:nth-child(1) {
+  left: 30px;
+}
+.rose-petal:nth-child(11) {
+  left: -30px;
+}
+.rose-petal:nth-child(12) {
+  top: 61px;
+  left: -65px;
 }
