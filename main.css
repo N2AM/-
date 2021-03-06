@@ -71,9 +71,9 @@ body .rose-wrapper .rose-circle .rose-petal:after {
   position: absolute;
   height: 20px;
   width: 4px;
-  background: #fff;
   left: 0;
   top: 0;
+  background-color: #fff;
   -webkit-clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
           clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
 }
@@ -84,9 +84,8 @@ body .rose-wrapper .rose-circle .rose-petal:nth-of-type(1) {
 }
 
 body .rose-wrapper .rose-circle .rose-petal:nth-of-type(1)::after {
-  background-color: #c2c2c2 !important;
-  -webkit-animation: fade-petal 1s infinite;
-          animation: fade-petal 1s infinite;
+  -webkit-animation: fade-petal 2s;
+          animation: fade-petal 2s;
 }
 
 body .rose-wrapper .rose-circle .rose-petal:nth-of-type(2) {
@@ -95,9 +94,8 @@ body .rose-wrapper .rose-circle .rose-petal:nth-of-type(2) {
 }
 
 body .rose-wrapper .rose-circle .rose-petal:nth-of-type(2)::after {
-  background-color: #b3b3b3 !important;
-  -webkit-animation: fade-petal 1s infinite;
-          animation: fade-petal 1s infinite;
+  -webkit-animation: fade-petal 3s;
+          animation: fade-petal 3s;
 }
 
 body .rose-wrapper .rose-circle .rose-petal:nth-of-type(3) {
@@ -106,9 +104,8 @@ body .rose-wrapper .rose-circle .rose-petal:nth-of-type(3) {
 }
 
 body .rose-wrapper .rose-circle .rose-petal:nth-of-type(3)::after {
-  background-color: #a3a3a3 !important;
-  -webkit-animation: fade-petal 1s infinite;
-          animation: fade-petal 1s infinite;
+  -webkit-animation: fade-petal 4s;
+          animation: fade-petal 4s;
 }
 
 body .rose-wrapper .rose-circle .rose-petal:nth-of-type(4) {
@@ -117,9 +114,8 @@ body .rose-wrapper .rose-circle .rose-petal:nth-of-type(4) {
 }
 
 body .rose-wrapper .rose-circle .rose-petal:nth-of-type(4)::after {
-  background-color: #949494 !important;
-  -webkit-animation: fade-petal 1s infinite;
-          animation: fade-petal 1s infinite;
+  -webkit-animation: fade-petal 5s;
+          animation: fade-petal 5s;
 }
 
 body .rose-wrapper .rose-circle .rose-petal:nth-of-type(5) {
@@ -128,9 +124,8 @@ body .rose-wrapper .rose-circle .rose-petal:nth-of-type(5) {
 }
 
 body .rose-wrapper .rose-circle .rose-petal:nth-of-type(5)::after {
-  background-color: #858585 !important;
-  -webkit-animation: fade-petal 1s infinite;
-          animation: fade-petal 1s infinite;
+  -webkit-animation: fade-petal 6s;
+          animation: fade-petal 6s;
 }
 
 body .rose-wrapper .rose-circle .rose-petal:nth-of-type(6) {
@@ -139,9 +134,8 @@ body .rose-wrapper .rose-circle .rose-petal:nth-of-type(6) {
 }
 
 body .rose-wrapper .rose-circle .rose-petal:nth-of-type(6)::after {
-  background-color: #757575 !important;
-  -webkit-animation: fade-petal 1s infinite;
-          animation: fade-petal 1s infinite;
+  -webkit-animation: fade-petal 7s;
+          animation: fade-petal 7s;
 }
 
 body .rose-wrapper .rose-circle .rose-petal:nth-of-type(7) {
@@ -150,9 +144,8 @@ body .rose-wrapper .rose-circle .rose-petal:nth-of-type(7) {
 }
 
 body .rose-wrapper .rose-circle .rose-petal:nth-of-type(7)::after {
-  background-color: #666666 !important;
-  -webkit-animation: fade-petal 1s infinite;
-          animation: fade-petal 1s infinite;
+  -webkit-animation: fade-petal 8s;
+          animation: fade-petal 8s;
 }
 
 body .rose-wrapper .rose-circle .rose-petal:nth-of-type(8) {
@@ -161,9 +154,8 @@ body .rose-wrapper .rose-circle .rose-petal:nth-of-type(8) {
 }
 
 body .rose-wrapper .rose-circle .rose-petal:nth-of-type(8)::after {
-  background-color: #575757 !important;
-  -webkit-animation: fade-petal 1s infinite;
-          animation: fade-petal 1s infinite;
+  -webkit-animation: fade-petal 9s;
+          animation: fade-petal 9s;
 }
 
 body .rose-wrapper .rose-circle .rose-petal:nth-of-type(9) {
@@ -172,9 +164,8 @@ body .rose-wrapper .rose-circle .rose-petal:nth-of-type(9) {
 }
 
 body .rose-wrapper .rose-circle .rose-petal:nth-of-type(9)::after {
-  background-color: #474747 !important;
-  -webkit-animation: fade-petal 1s infinite;
-          animation: fade-petal 1s infinite;
+  -webkit-animation: fade-petal 10s;
+          animation: fade-petal 10s;
 }
 
 body .rose-wrapper .rose-circle .rose-petal:nth-of-type(10) {
@@ -183,9 +174,8 @@ body .rose-wrapper .rose-circle .rose-petal:nth-of-type(10) {
 }
 
 body .rose-wrapper .rose-circle .rose-petal:nth-of-type(10)::after {
-  background-color: #383838 !important;
-  -webkit-animation: fade-petal 1s infinite;
-          animation: fade-petal 1s infinite;
+  -webkit-animation: fade-petal 11s;
+          animation: fade-petal 11s;
 }
 
 body .rose-wrapper .rose-circle .rose-petal:nth-of-type(11) {
@@ -194,9 +184,8 @@ body .rose-wrapper .rose-circle .rose-petal:nth-of-type(11) {
 }
 
 body .rose-wrapper .rose-circle .rose-petal:nth-of-type(11)::after {
-  background-color: #292929 !important;
-  -webkit-animation: fade-petal 1s infinite;
-          animation: fade-petal 1s infinite;
+  -webkit-animation: fade-petal 12s;
+          animation: fade-petal 12s;
 }
 
 body .rose-wrapper .rose-circle .rose-petal:nth-of-type(12) {
@@ -205,9 +194,8 @@ body .rose-wrapper .rose-circle .rose-petal:nth-of-type(12) {
 }
 
 body .rose-wrapper .rose-circle .rose-petal:nth-of-type(12)::after {
-  background-color: #1a1a1a !important;
-  -webkit-animation: fade-petal 1s infinite;
-          animation: fade-petal 1s infinite;
+  -webkit-animation: fade-petal 13s;
+          animation: fade-petal 13s;
 }
 
 body .rose-wrapper .rose-circle .stem {
@@ -235,20 +223,20 @@ body .rose-wrapper .rose-circle .leaf {
 }
 
 @-webkit-keyframes fade-petal {
+  to {
+    background-color: #000;
+  }
   from {
     background-color: #fff;
-  }
-  to {
-    background-color: #666666 !important;
   }
 }
 
 @keyframes fade-petal {
+  to {
+    background-color: #000;
+  }
   from {
     background-color: #fff;
-  }
-  to {
-    background-color: #666666 !important;
   }
 }
 /*# sourceMappingURL=main.css.map */
