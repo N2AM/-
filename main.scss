@@ -1,4 +1,4 @@
-$base-color: grey;
+$base-color: #fff;
 html,
 body {
   padding: 0;
@@ -12,7 +12,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: black;
+    background-color: #000;
     .rose-circle {
       width: 100px;
       height: 100px;
@@ -33,33 +33,22 @@ body {
       height: 40px;
       top: 15px;
       opacity: 1;
-      color: white;
+      color: #fff;
 
       &:after {
         content: "";
         position: absolute;
+        height: 20px;
         width: 2px;
-        height: 7px;
-        background: white;
+        background: #fff;
         left: 0;
         top: 0;
       }
-      @for $i from 1 through 60 {
+      @for $i from 1 through 12 {
         &:nth-of-type(#{$i}) {
-          transform: rotateZ(calc(6deg * #{$i}));
-          display: none;
-        }
-        @if $i % 5 == 0 {
-          &:nth-of-type(#{$i}) {
-            display: block;
-
-            width: 2px;
-            &:after {
-              //              background-color: darken($base-color, $i / 10 * 1%) !important;
-
-              height: 20px;
-              width: 2px;
-            }
+          transform: rotateZ(calc(30deg * #{$i}));
+          &::after {
+            background-color: darken($base-color, $i * 6%) !important;
           }
         }
       }
