@@ -39,10 +39,19 @@ body {
         content: "";
         position: absolute;
         height: 20px;
-        width: 2px;
+        width: 4px;
         background: #fff;
         left: 0;
         top: 0;
+        clip-path: polygon(
+          25% 0%,
+          75% 0%,
+          100% 50%,
+          75% 100%,
+          25% 100%,
+          0% 50%
+        );
+        animation: fade-petal ease infinite 2s;
       }
       @for $i from 1 through 12 {
         &:nth-of-type(#{$i}) {
@@ -73,6 +82,15 @@ body {
   width: 20px;
   height: 20px;
   border: solid 3px #fff;
-  border-top-left-radius: 50%;
-  border-bottom-right-radius: 50%;
+  border-top-left-radius: 80%;
+  border-bottom-right-radius: 80%;
+}
+
+@keyframes fade-petal {
+  from {
+    background-color: #fff;
+  }
+  to {
+    background-color: darken($base-color, 6%) !important;
+  }
 }
