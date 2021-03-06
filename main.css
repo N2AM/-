@@ -5,10 +5,23 @@ body {
   height: 100%;
 }
 
-html .rose-wrapper,
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #f9f9f9;
+}
+
 body .rose-wrapper {
-  width: 100%;
-  height: 100%;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -22,7 +35,6 @@ body .rose-wrapper {
   background-color: #000;
 }
 
-html .rose-wrapper .rose-circle,
 body .rose-wrapper .rose-circle {
   width: 100px;
   height: 100px;
@@ -40,8 +52,7 @@ body .rose-wrapper .rose-circle {
   z-index: 10;
 }
 
-html .rose-wrapper .rose-petal,
-body .rose-wrapper .rose-petal {
+body .rose-wrapper .rose-circle .rose-petal {
   position: absolute;
   left: calc(50% - 1px);
   width: 2px;
@@ -55,8 +66,7 @@ body .rose-wrapper .rose-petal {
   color: #fff;
 }
 
-html .rose-wrapper .rose-petal:after,
-body .rose-wrapper .rose-petal:after {
+body .rose-wrapper .rose-circle .rose-petal:after {
   content: "";
   position: absolute;
   height: 20px;
@@ -70,139 +80,115 @@ body .rose-wrapper .rose-petal:after {
           animation: fade-petal ease infinite 2s;
 }
 
-html .rose-wrapper .rose-petal:nth-of-type(1),
-body .rose-wrapper .rose-petal:nth-of-type(1) {
+body .rose-wrapper .rose-circle .rose-petal:nth-of-type(1) {
   -webkit-transform: rotateZ(calc(30deg * 1));
           transform: rotateZ(calc(30deg * 1));
 }
 
-html .rose-wrapper .rose-petal:nth-of-type(1)::after,
-body .rose-wrapper .rose-petal:nth-of-type(1)::after {
+body .rose-wrapper .rose-circle .rose-petal:nth-of-type(1)::after {
   background-color: #f0f0f0 !important;
 }
 
-html .rose-wrapper .rose-petal:nth-of-type(2),
-body .rose-wrapper .rose-petal:nth-of-type(2) {
+body .rose-wrapper .rose-circle .rose-petal:nth-of-type(2) {
   -webkit-transform: rotateZ(calc(30deg * 2));
           transform: rotateZ(calc(30deg * 2));
 }
 
-html .rose-wrapper .rose-petal:nth-of-type(2)::after,
-body .rose-wrapper .rose-petal:nth-of-type(2)::after {
+body .rose-wrapper .rose-circle .rose-petal:nth-of-type(2)::after {
   background-color: #e0e0e0 !important;
 }
 
-html .rose-wrapper .rose-petal:nth-of-type(3),
-body .rose-wrapper .rose-petal:nth-of-type(3) {
+body .rose-wrapper .rose-circle .rose-petal:nth-of-type(3) {
   -webkit-transform: rotateZ(calc(30deg * 3));
           transform: rotateZ(calc(30deg * 3));
 }
 
-html .rose-wrapper .rose-petal:nth-of-type(3)::after,
-body .rose-wrapper .rose-petal:nth-of-type(3)::after {
+body .rose-wrapper .rose-circle .rose-petal:nth-of-type(3)::after {
   background-color: #d1d1d1 !important;
 }
 
-html .rose-wrapper .rose-petal:nth-of-type(4),
-body .rose-wrapper .rose-petal:nth-of-type(4) {
+body .rose-wrapper .rose-circle .rose-petal:nth-of-type(4) {
   -webkit-transform: rotateZ(calc(30deg * 4));
           transform: rotateZ(calc(30deg * 4));
 }
 
-html .rose-wrapper .rose-petal:nth-of-type(4)::after,
-body .rose-wrapper .rose-petal:nth-of-type(4)::after {
+body .rose-wrapper .rose-circle .rose-petal:nth-of-type(4)::after {
   background-color: #c2c2c2 !important;
 }
 
-html .rose-wrapper .rose-petal:nth-of-type(5),
-body .rose-wrapper .rose-petal:nth-of-type(5) {
+body .rose-wrapper .rose-circle .rose-petal:nth-of-type(5) {
   -webkit-transform: rotateZ(calc(30deg * 5));
           transform: rotateZ(calc(30deg * 5));
 }
 
-html .rose-wrapper .rose-petal:nth-of-type(5)::after,
-body .rose-wrapper .rose-petal:nth-of-type(5)::after {
+body .rose-wrapper .rose-circle .rose-petal:nth-of-type(5)::after {
   background-color: #b3b3b3 !important;
 }
 
-html .rose-wrapper .rose-petal:nth-of-type(6),
-body .rose-wrapper .rose-petal:nth-of-type(6) {
+body .rose-wrapper .rose-circle .rose-petal:nth-of-type(6) {
   -webkit-transform: rotateZ(calc(30deg * 6));
           transform: rotateZ(calc(30deg * 6));
 }
 
-html .rose-wrapper .rose-petal:nth-of-type(6)::after,
-body .rose-wrapper .rose-petal:nth-of-type(6)::after {
+body .rose-wrapper .rose-circle .rose-petal:nth-of-type(6)::after {
   background-color: #a3a3a3 !important;
 }
 
-html .rose-wrapper .rose-petal:nth-of-type(7),
-body .rose-wrapper .rose-petal:nth-of-type(7) {
+body .rose-wrapper .rose-circle .rose-petal:nth-of-type(7) {
   -webkit-transform: rotateZ(calc(30deg * 7));
           transform: rotateZ(calc(30deg * 7));
 }
 
-html .rose-wrapper .rose-petal:nth-of-type(7)::after,
-body .rose-wrapper .rose-petal:nth-of-type(7)::after {
+body .rose-wrapper .rose-circle .rose-petal:nth-of-type(7)::after {
   background-color: #949494 !important;
 }
 
-html .rose-wrapper .rose-petal:nth-of-type(8),
-body .rose-wrapper .rose-petal:nth-of-type(8) {
+body .rose-wrapper .rose-circle .rose-petal:nth-of-type(8) {
   -webkit-transform: rotateZ(calc(30deg * 8));
           transform: rotateZ(calc(30deg * 8));
 }
 
-html .rose-wrapper .rose-petal:nth-of-type(8)::after,
-body .rose-wrapper .rose-petal:nth-of-type(8)::after {
+body .rose-wrapper .rose-circle .rose-petal:nth-of-type(8)::after {
   background-color: #858585 !important;
 }
 
-html .rose-wrapper .rose-petal:nth-of-type(9),
-body .rose-wrapper .rose-petal:nth-of-type(9) {
+body .rose-wrapper .rose-circle .rose-petal:nth-of-type(9) {
   -webkit-transform: rotateZ(calc(30deg * 9));
           transform: rotateZ(calc(30deg * 9));
 }
 
-html .rose-wrapper .rose-petal:nth-of-type(9)::after,
-body .rose-wrapper .rose-petal:nth-of-type(9)::after {
+body .rose-wrapper .rose-circle .rose-petal:nth-of-type(9)::after {
   background-color: #757575 !important;
 }
 
-html .rose-wrapper .rose-petal:nth-of-type(10),
-body .rose-wrapper .rose-petal:nth-of-type(10) {
+body .rose-wrapper .rose-circle .rose-petal:nth-of-type(10) {
   -webkit-transform: rotateZ(calc(30deg * 10));
           transform: rotateZ(calc(30deg * 10));
 }
 
-html .rose-wrapper .rose-petal:nth-of-type(10)::after,
-body .rose-wrapper .rose-petal:nth-of-type(10)::after {
+body .rose-wrapper .rose-circle .rose-petal:nth-of-type(10)::after {
   background-color: #666666 !important;
 }
 
-html .rose-wrapper .rose-petal:nth-of-type(11),
-body .rose-wrapper .rose-petal:nth-of-type(11) {
+body .rose-wrapper .rose-circle .rose-petal:nth-of-type(11) {
   -webkit-transform: rotateZ(calc(30deg * 11));
           transform: rotateZ(calc(30deg * 11));
 }
 
-html .rose-wrapper .rose-petal:nth-of-type(11)::after,
-body .rose-wrapper .rose-petal:nth-of-type(11)::after {
+body .rose-wrapper .rose-circle .rose-petal:nth-of-type(11)::after {
   background-color: #575757 !important;
 }
 
-html .rose-wrapper .rose-petal:nth-of-type(12),
-body .rose-wrapper .rose-petal:nth-of-type(12) {
+body .rose-wrapper .rose-circle .rose-petal:nth-of-type(12) {
   -webkit-transform: rotateZ(calc(30deg * 12));
           transform: rotateZ(calc(30deg * 12));
 }
 
-html .rose-wrapper .rose-petal:nth-of-type(12)::after,
-body .rose-wrapper .rose-petal:nth-of-type(12)::after {
+body .rose-wrapper .rose-circle .rose-petal:nth-of-type(12)::after {
   background-color: #474747 !important;
 }
 
-.stem {
+body .rose-wrapper .rose-circle .stem {
   position: absolute;
   top: 80%;
   left: 0px;
@@ -215,7 +201,7 @@ body .rose-wrapper .rose-petal:nth-of-type(12)::after {
           transform: rotate(70deg);
 }
 
-.leaf {
+body .rose-wrapper .rose-circle .leaf {
   position: absolute;
   top: 90%;
   left: 100px;
