@@ -60,13 +60,13 @@ body {
             25% 100%,
             0% 50%
           );
-          animation: fade-petal ease infinite 2s;
         }
         @for $i from 1 through 12 {
           &:nth-of-type(#{$i}) {
             transform: rotateZ(calc(30deg * #{$i}));
             &::after {
-              background-color: darken($base-color, $i * 6%) !important;
+              background-color: darken($base-color, ($i + 3) * 6%) !important;
+              animation: fade-petal 1s infinite;
             }
           }
         }
@@ -101,6 +101,6 @@ body {
     background-color: $base-color;
   }
   to {
-    background-color: darken($base-color, 6%) !important;
+    background-color: darken($base-color, 60%) !important;
   }
 }
