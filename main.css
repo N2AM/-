@@ -7,8 +7,9 @@ body {
 
 html .rose-wrapper,
 body .rose-wrapper {
+  width: 100%;
   height: 100%;
-  background: black;
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -18,166 +19,638 @@ body .rose-wrapper {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 0px;
-  margin: 0px;
+  background-color: black;
+}
+
+html .rose-wrapper .rose-circle,
+body .rose-wrapper .rose-circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  z-index: 10;
 }
 
 html .rose-wrapper .rose-petal,
 body .rose-wrapper .rose-petal {
-  position: relative;
-  height: 20px;
-  width: 1px;
-  margin: 3px;
+  position: absolute;
+  left: calc(50% - 1px);
+  width: 2px;
+  -webkit-transform-origin: bottom center;
+          transform-origin: bottom center;
+  z-index: 2;
+  background: none;
+  height: 40px;
+  top: 15px;
+  opacity: 1;
+  color: white;
+}
+
+html .rose-wrapper .rose-petal:after,
+body .rose-wrapper .rose-petal:after {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 7px;
   background: white;
-  border: 2px solid;
+  left: 0;
+  top: 0;
 }
 
-.rose-petal:nth-child(1) {
-  background-color: #787878 !important;
+html .rose-wrapper .rose-petal:nth-of-type(1),
+body .rose-wrapper .rose-petal:nth-of-type(1) {
+  -webkit-transform: rotateZ(calc(6deg * 1));
+          transform: rotateZ(calc(6deg * 1));
+  display: none;
 }
 
-.rose-petal:nth-child(2) {
-  background-color: #717171 !important;
+html .rose-wrapper .rose-petal:nth-of-type(2),
+body .rose-wrapper .rose-petal:nth-of-type(2) {
+  -webkit-transform: rotateZ(calc(6deg * 2));
+          transform: rotateZ(calc(6deg * 2));
+  display: none;
 }
 
-.rose-petal:nth-child(3) {
-  background-color: dimgray !important;
+html .rose-wrapper .rose-petal:nth-of-type(3),
+body .rose-wrapper .rose-petal:nth-of-type(3) {
+  -webkit-transform: rotateZ(calc(6deg * 3));
+          transform: rotateZ(calc(6deg * 3));
+  display: none;
 }
 
-.rose-petal:nth-child(4) {
-  background-color: #616161 !important;
+html .rose-wrapper .rose-petal:nth-of-type(4),
+body .rose-wrapper .rose-petal:nth-of-type(4) {
+  -webkit-transform: rotateZ(calc(6deg * 4));
+          transform: rotateZ(calc(6deg * 4));
+  display: none;
 }
 
-.rose-petal:nth-child(5) {
-  background-color: #5a5a5a !important;
+html .rose-wrapper .rose-petal:nth-of-type(5),
+body .rose-wrapper .rose-petal:nth-of-type(5) {
+  -webkit-transform: rotateZ(calc(6deg * 5));
+          transform: rotateZ(calc(6deg * 5));
+  display: none;
 }
 
-.rose-petal:nth-child(6) {
-  background-color: #525252 !important;
+html .rose-wrapper .rose-petal:nth-of-type(5),
+body .rose-wrapper .rose-petal:nth-of-type(5) {
+  display: block;
+  width: 2px;
 }
 
-.rose-petal:nth-child(7) {
-  background-color: #4a4a4a !important;
+html .rose-wrapper .rose-petal:nth-of-type(5):after,
+body .rose-wrapper .rose-petal:nth-of-type(5):after {
+  height: 20px;
+  width: 2px;
 }
 
-.rose-petal:nth-child(8) {
-  background-color: #434343 !important;
+html .rose-wrapper .rose-petal:nth-of-type(6),
+body .rose-wrapper .rose-petal:nth-of-type(6) {
+  -webkit-transform: rotateZ(calc(6deg * 6));
+          transform: rotateZ(calc(6deg * 6));
+  display: none;
 }
 
-.rose-petal:nth-child(9) {
-  background-color: #3b3b3b !important;
+html .rose-wrapper .rose-petal:nth-of-type(7),
+body .rose-wrapper .rose-petal:nth-of-type(7) {
+  -webkit-transform: rotateZ(calc(6deg * 7));
+          transform: rotateZ(calc(6deg * 7));
+  display: none;
 }
 
-.rose-petal:nth-child(10) {
-  background-color: #343434 !important;
+html .rose-wrapper .rose-petal:nth-of-type(8),
+body .rose-wrapper .rose-petal:nth-of-type(8) {
+  -webkit-transform: rotateZ(calc(6deg * 8));
+          transform: rotateZ(calc(6deg * 8));
+  display: none;
 }
 
-.rose-petal:nth-child(11) {
-  background-color: #2c2c2c !important;
+html .rose-wrapper .rose-petal:nth-of-type(9),
+body .rose-wrapper .rose-petal:nth-of-type(9) {
+  -webkit-transform: rotateZ(calc(6deg * 9));
+          transform: rotateZ(calc(6deg * 9));
+  display: none;
 }
 
-.rose-petal:nth-child(12) {
-  background-color: #242424 !important;
+html .rose-wrapper .rose-petal:nth-of-type(10),
+body .rose-wrapper .rose-petal:nth-of-type(10) {
+  -webkit-transform: rotateZ(calc(6deg * 10));
+          transform: rotateZ(calc(6deg * 10));
+  display: none;
 }
 
-.rose-petal:nth-child(1) {
-  -webkit-transform: rotate(30deg) skewY(-60deg);
-          transform: rotate(30deg) skewY(-60deg);
+html .rose-wrapper .rose-petal:nth-of-type(10),
+body .rose-wrapper .rose-petal:nth-of-type(10) {
+  display: block;
+  width: 2px;
 }
 
-.rose-petal:nth-child(2) {
-  -webkit-transform: rotate(60deg) skewY(-60deg);
-          transform: rotate(60deg) skewY(-60deg);
+html .rose-wrapper .rose-petal:nth-of-type(10):after,
+body .rose-wrapper .rose-petal:nth-of-type(10):after {
+  height: 20px;
+  width: 2px;
 }
 
-.rose-petal:nth-child(3) {
-  -webkit-transform: rotate(90deg) skewY(-60deg);
-          transform: rotate(90deg) skewY(-60deg);
+html .rose-wrapper .rose-petal:nth-of-type(11),
+body .rose-wrapper .rose-petal:nth-of-type(11) {
+  -webkit-transform: rotateZ(calc(6deg * 11));
+          transform: rotateZ(calc(6deg * 11));
+  display: none;
 }
 
-.rose-petal:nth-child(4) {
-  -webkit-transform: rotate(120deg) skewY(-60deg);
-          transform: rotate(120deg) skewY(-60deg);
+html .rose-wrapper .rose-petal:nth-of-type(12),
+body .rose-wrapper .rose-petal:nth-of-type(12) {
+  -webkit-transform: rotateZ(calc(6deg * 12));
+          transform: rotateZ(calc(6deg * 12));
+  display: none;
 }
 
-.rose-petal:nth-child(5) {
-  -webkit-transform: rotate(150deg) skewY(-60deg);
-          transform: rotate(150deg) skewY(-60deg);
+html .rose-wrapper .rose-petal:nth-of-type(13),
+body .rose-wrapper .rose-petal:nth-of-type(13) {
+  -webkit-transform: rotateZ(calc(6deg * 13));
+          transform: rotateZ(calc(6deg * 13));
+  display: none;
 }
 
-.rose-petal:nth-child(6) {
-  -webkit-transform: rotate(180deg) skewY(-60deg);
-          transform: rotate(180deg) skewY(-60deg);
+html .rose-wrapper .rose-petal:nth-of-type(14),
+body .rose-wrapper .rose-petal:nth-of-type(14) {
+  -webkit-transform: rotateZ(calc(6deg * 14));
+          transform: rotateZ(calc(6deg * 14));
+  display: none;
 }
 
-.rose-petal:nth-child(7) {
-  -webkit-transform: rotate(210deg) skewY(-60deg);
-          transform: rotate(210deg) skewY(-60deg);
+html .rose-wrapper .rose-petal:nth-of-type(15),
+body .rose-wrapper .rose-petal:nth-of-type(15) {
+  -webkit-transform: rotateZ(calc(6deg * 15));
+          transform: rotateZ(calc(6deg * 15));
+  display: none;
 }
 
-.rose-petal:nth-child(8) {
-  -webkit-transform: rotate(240deg) skewY(-60deg);
-          transform: rotate(240deg) skewY(-60deg);
+html .rose-wrapper .rose-petal:nth-of-type(15),
+body .rose-wrapper .rose-petal:nth-of-type(15) {
+  display: block;
+  width: 2px;
 }
 
-.rose-petal:nth-child(9) {
-  -webkit-transform: rotate(270deg) skewY(-60deg);
-          transform: rotate(270deg) skewY(-60deg);
+html .rose-wrapper .rose-petal:nth-of-type(15):after,
+body .rose-wrapper .rose-petal:nth-of-type(15):after {
+  height: 20px;
+  width: 2px;
 }
 
-.rose-petal:nth-child(10) {
-  -webkit-transform: rotate(300deg) skewY(-60deg);
-          transform: rotate(300deg) skewY(-60deg);
+html .rose-wrapper .rose-petal:nth-of-type(16),
+body .rose-wrapper .rose-petal:nth-of-type(16) {
+  -webkit-transform: rotateZ(calc(6deg * 16));
+          transform: rotateZ(calc(6deg * 16));
+  display: none;
 }
 
-.rose-petal:nth-child(11) {
-  -webkit-transform: rotate(330deg) skewY(-60deg);
-          transform: rotate(330deg) skewY(-60deg);
+html .rose-wrapper .rose-petal:nth-of-type(17),
+body .rose-wrapper .rose-petal:nth-of-type(17) {
+  -webkit-transform: rotateZ(calc(6deg * 17));
+          transform: rotateZ(calc(6deg * 17));
+  display: none;
 }
 
-.rose-petal:nth-child(12) {
-  -webkit-transform: rotate(360deg) skewY(-60deg);
-          transform: rotate(360deg) skewY(-60deg);
+html .rose-wrapper .rose-petal:nth-of-type(18),
+body .rose-wrapper .rose-petal:nth-of-type(18) {
+  -webkit-transform: rotateZ(calc(6deg * 18));
+          transform: rotateZ(calc(6deg * 18));
+  display: none;
 }
 
-.rose-petal:nth-child(3),
-.rose-petal:nth-child(9) {
-  top: 25px;
+html .rose-wrapper .rose-petal:nth-of-type(19),
+body .rose-wrapper .rose-petal:nth-of-type(19) {
+  -webkit-transform: rotateZ(calc(6deg * 19));
+          transform: rotateZ(calc(6deg * 19));
+  display: none;
 }
 
-.rose-petal:nth-child(4),
-.rose-petal:nth-child(8) {
-  top: 13px;
+html .rose-wrapper .rose-petal:nth-of-type(20),
+body .rose-wrapper .rose-petal:nth-of-type(20) {
+  -webkit-transform: rotateZ(calc(6deg * 20));
+          transform: rotateZ(calc(6deg * 20));
+  display: none;
 }
 
-.rose-petal:nth-child(2),
-.rose-petal:nth-child(10) {
-  top: 45px;
+html .rose-wrapper .rose-petal:nth-of-type(20),
+body .rose-wrapper .rose-petal:nth-of-type(20) {
+  display: block;
+  width: 2px;
 }
 
-.rose-petal:nth-child(2) {
-  left: 10px;
+html .rose-wrapper .rose-petal:nth-of-type(20):after,
+body .rose-wrapper .rose-petal:nth-of-type(20):after {
+  height: 20px;
+  width: 2px;
 }
 
-.rose-petal:nth-child(10) {
-  left: -10px;
+html .rose-wrapper .rose-petal:nth-of-type(21),
+body .rose-wrapper .rose-petal:nth-of-type(21) {
+  -webkit-transform: rotateZ(calc(6deg * 21));
+          transform: rotateZ(calc(6deg * 21));
+  display: none;
 }
 
-.rose-petal:nth-child(1),
-.rose-petal:nth-child(11) {
-  top: 60px;
+html .rose-wrapper .rose-petal:nth-of-type(22),
+body .rose-wrapper .rose-petal:nth-of-type(22) {
+  -webkit-transform: rotateZ(calc(6deg * 22));
+          transform: rotateZ(calc(6deg * 22));
+  display: none;
 }
 
-.rose-petal:nth-child(1) {
-  left: 30px;
+html .rose-wrapper .rose-petal:nth-of-type(23),
+body .rose-wrapper .rose-petal:nth-of-type(23) {
+  -webkit-transform: rotateZ(calc(6deg * 23));
+          transform: rotateZ(calc(6deg * 23));
+  display: none;
 }
 
-.rose-petal:nth-child(11) {
-  left: -30px;
+html .rose-wrapper .rose-petal:nth-of-type(24),
+body .rose-wrapper .rose-petal:nth-of-type(24) {
+  -webkit-transform: rotateZ(calc(6deg * 24));
+          transform: rotateZ(calc(6deg * 24));
+  display: none;
 }
 
-.rose-petal:nth-child(12) {
-  top: 61px;
-  left: -65px;
+html .rose-wrapper .rose-petal:nth-of-type(25),
+body .rose-wrapper .rose-petal:nth-of-type(25) {
+  -webkit-transform: rotateZ(calc(6deg * 25));
+          transform: rotateZ(calc(6deg * 25));
+  display: none;
+}
+
+html .rose-wrapper .rose-petal:nth-of-type(25),
+body .rose-wrapper .rose-petal:nth-of-type(25) {
+  display: block;
+  width: 2px;
+}
+
+html .rose-wrapper .rose-petal:nth-of-type(25):after,
+body .rose-wrapper .rose-petal:nth-of-type(25):after {
+  height: 20px;
+  width: 2px;
+}
+
+html .rose-wrapper .rose-petal:nth-of-type(26),
+body .rose-wrapper .rose-petal:nth-of-type(26) {
+  -webkit-transform: rotateZ(calc(6deg * 26));
+          transform: rotateZ(calc(6deg * 26));
+  display: none;
+}
+
+html .rose-wrapper .rose-petal:nth-of-type(27),
+body .rose-wrapper .rose-petal:nth-of-type(27) {
+  -webkit-transform: rotateZ(calc(6deg * 27));
+          transform: rotateZ(calc(6deg * 27));
+  display: none;
+}
+
+html .rose-wrapper .rose-petal:nth-of-type(28),
+body .rose-wrapper .rose-petal:nth-of-type(28) {
+  -webkit-transform: rotateZ(calc(6deg * 28));
+          transform: rotateZ(calc(6deg * 28));
+  display: none;
+}
+
+html .rose-wrapper .rose-petal:nth-of-type(29),
+body .rose-wrapper .rose-petal:nth-of-type(29) {
+  -webkit-transform: rotateZ(calc(6deg * 29));
+          transform: rotateZ(calc(6deg * 29));
+  display: none;
+}
+
+html .rose-wrapper .rose-petal:nth-of-type(30),
+body .rose-wrapper .rose-petal:nth-of-type(30) {
+  -webkit-transform: rotateZ(calc(6deg * 30));
+          transform: rotateZ(calc(6deg * 30));
+  display: none;
+}
+
+html .rose-wrapper .rose-petal:nth-of-type(30),
+body .rose-wrapper .rose-petal:nth-of-type(30) {
+  display: block;
+  width: 2px;
+}
+
+html .rose-wrapper .rose-petal:nth-of-type(30):after,
+body .rose-wrapper .rose-petal:nth-of-type(30):after {
+  height: 20px;
+  width: 2px;
+}
+
+html .rose-wrapper .rose-petal:nth-of-type(31),
+body .rose-wrapper .rose-petal:nth-of-type(31) {
+  -webkit-transform: rotateZ(calc(6deg * 31));
+          transform: rotateZ(calc(6deg * 31));
+  display: none;
+}
+
+html .rose-wrapper .rose-petal:nth-of-type(32),
+body .rose-wrapper .rose-petal:nth-of-type(32) {
+  -webkit-transform: rotateZ(calc(6deg * 32));
+          transform: rotateZ(calc(6deg * 32));
+  display: none;
+}
+
+html .rose-wrapper .rose-petal:nth-of-type(33),
+body .rose-wrapper .rose-petal:nth-of-type(33) {
+  -webkit-transform: rotateZ(calc(6deg * 33));
+          transform: rotateZ(calc(6deg * 33));
+  display: none;
+}
+
+html .rose-wrapper .rose-petal:nth-of-type(34),
+body .rose-wrapper .rose-petal:nth-of-type(34) {
+  -webkit-transform: rotateZ(calc(6deg * 34));
+          transform: rotateZ(calc(6deg * 34));
+  display: none;
+}
+
+html .rose-wrapper .rose-petal:nth-of-type(35),
+body .rose-wrapper .rose-petal:nth-of-type(35) {
+  -webkit-transform: rotateZ(calc(6deg * 35));
+          transform: rotateZ(calc(6deg * 35));
+  display: none;
+}
+
+html .rose-wrapper .rose-petal:nth-of-type(35),
+body .rose-wrapper .rose-petal:nth-of-type(35) {
+  display: block;
+  width: 2px;
+}
+
+html .rose-wrapper .rose-petal:nth-of-type(35):after,
+body .rose-wrapper .rose-petal:nth-of-type(35):after {
+  height: 20px;
+  width: 2px;
+}
+
+html .rose-wrapper .rose-petal:nth-of-type(36),
+body .rose-wrapper .rose-petal:nth-of-type(36) {
+  -webkit-transform: rotateZ(calc(6deg * 36));
+          transform: rotateZ(calc(6deg * 36));
+  display: none;
+}
+
+html .rose-wrapper .rose-petal:nth-of-type(37),
+body .rose-wrapper .rose-petal:nth-of-type(37) {
+  -webkit-transform: rotateZ(calc(6deg * 37));
+          transform: rotateZ(calc(6deg * 37));
+  display: none;
+}
+
+html .rose-wrapper .rose-petal:nth-of-type(38),
+body .rose-wrapper .rose-petal:nth-of-type(38) {
+  -webkit-transform: rotateZ(calc(6deg * 38));
+          transform: rotateZ(calc(6deg * 38));
+  display: none;
+}
+
+html .rose-wrapper .rose-petal:nth-of-type(39),
+body .rose-wrapper .rose-petal:nth-of-type(39) {
+  -webkit-transform: rotateZ(calc(6deg * 39));
+          transform: rotateZ(calc(6deg * 39));
+  display: none;
+}
+
+html .rose-wrapper .rose-petal:nth-of-type(40),
+body .rose-wrapper .rose-petal:nth-of-type(40) {
+  -webkit-transform: rotateZ(calc(6deg * 40));
+          transform: rotateZ(calc(6deg * 40));
+  display: none;
+}
+
+html .rose-wrapper .rose-petal:nth-of-type(40),
+body .rose-wrapper .rose-petal:nth-of-type(40) {
+  display: block;
+  width: 2px;
+}
+
+html .rose-wrapper .rose-petal:nth-of-type(40):after,
+body .rose-wrapper .rose-petal:nth-of-type(40):after {
+  height: 20px;
+  width: 2px;
+}
+
+html .rose-wrapper .rose-petal:nth-of-type(41),
+body .rose-wrapper .rose-petal:nth-of-type(41) {
+  -webkit-transform: rotateZ(calc(6deg * 41));
+          transform: rotateZ(calc(6deg * 41));
+  display: none;
+}
+
+html .rose-wrapper .rose-petal:nth-of-type(42),
+body .rose-wrapper .rose-petal:nth-of-type(42) {
+  -webkit-transform: rotateZ(calc(6deg * 42));
+          transform: rotateZ(calc(6deg * 42));
+  display: none;
+}
+
+html .rose-wrapper .rose-petal:nth-of-type(43),
+body .rose-wrapper .rose-petal:nth-of-type(43) {
+  -webkit-transform: rotateZ(calc(6deg * 43));
+          transform: rotateZ(calc(6deg * 43));
+  display: none;
+}
+
+html .rose-wrapper .rose-petal:nth-of-type(44),
+body .rose-wrapper .rose-petal:nth-of-type(44) {
+  -webkit-transform: rotateZ(calc(6deg * 44));
+          transform: rotateZ(calc(6deg * 44));
+  display: none;
+}
+
+html .rose-wrapper .rose-petal:nth-of-type(45),
+body .rose-wrapper .rose-petal:nth-of-type(45) {
+  -webkit-transform: rotateZ(calc(6deg * 45));
+          transform: rotateZ(calc(6deg * 45));
+  display: none;
+}
+
+html .rose-wrapper .rose-petal:nth-of-type(45),
+body .rose-wrapper .rose-petal:nth-of-type(45) {
+  display: block;
+  width: 2px;
+}
+
+html .rose-wrapper .rose-petal:nth-of-type(45):after,
+body .rose-wrapper .rose-petal:nth-of-type(45):after {
+  height: 20px;
+  width: 2px;
+}
+
+html .rose-wrapper .rose-petal:nth-of-type(46),
+body .rose-wrapper .rose-petal:nth-of-type(46) {
+  -webkit-transform: rotateZ(calc(6deg * 46));
+          transform: rotateZ(calc(6deg * 46));
+  display: none;
+}
+
+html .rose-wrapper .rose-petal:nth-of-type(47),
+body .rose-wrapper .rose-petal:nth-of-type(47) {
+  -webkit-transform: rotateZ(calc(6deg * 47));
+          transform: rotateZ(calc(6deg * 47));
+  display: none;
+}
+
+html .rose-wrapper .rose-petal:nth-of-type(48),
+body .rose-wrapper .rose-petal:nth-of-type(48) {
+  -webkit-transform: rotateZ(calc(6deg * 48));
+          transform: rotateZ(calc(6deg * 48));
+  display: none;
+}
+
+html .rose-wrapper .rose-petal:nth-of-type(49),
+body .rose-wrapper .rose-petal:nth-of-type(49) {
+  -webkit-transform: rotateZ(calc(6deg * 49));
+          transform: rotateZ(calc(6deg * 49));
+  display: none;
+}
+
+html .rose-wrapper .rose-petal:nth-of-type(50),
+body .rose-wrapper .rose-petal:nth-of-type(50) {
+  -webkit-transform: rotateZ(calc(6deg * 50));
+          transform: rotateZ(calc(6deg * 50));
+  display: none;
+}
+
+html .rose-wrapper .rose-petal:nth-of-type(50),
+body .rose-wrapper .rose-petal:nth-of-type(50) {
+  display: block;
+  width: 2px;
+}
+
+html .rose-wrapper .rose-petal:nth-of-type(50):after,
+body .rose-wrapper .rose-petal:nth-of-type(50):after {
+  height: 20px;
+  width: 2px;
+}
+
+html .rose-wrapper .rose-petal:nth-of-type(51),
+body .rose-wrapper .rose-petal:nth-of-type(51) {
+  -webkit-transform: rotateZ(calc(6deg * 51));
+          transform: rotateZ(calc(6deg * 51));
+  display: none;
+}
+
+html .rose-wrapper .rose-petal:nth-of-type(52),
+body .rose-wrapper .rose-petal:nth-of-type(52) {
+  -webkit-transform: rotateZ(calc(6deg * 52));
+          transform: rotateZ(calc(6deg * 52));
+  display: none;
+}
+
+html .rose-wrapper .rose-petal:nth-of-type(53),
+body .rose-wrapper .rose-petal:nth-of-type(53) {
+  -webkit-transform: rotateZ(calc(6deg * 53));
+          transform: rotateZ(calc(6deg * 53));
+  display: none;
+}
+
+html .rose-wrapper .rose-petal:nth-of-type(54),
+body .rose-wrapper .rose-petal:nth-of-type(54) {
+  -webkit-transform: rotateZ(calc(6deg * 54));
+          transform: rotateZ(calc(6deg * 54));
+  display: none;
+}
+
+html .rose-wrapper .rose-petal:nth-of-type(55),
+body .rose-wrapper .rose-petal:nth-of-type(55) {
+  -webkit-transform: rotateZ(calc(6deg * 55));
+          transform: rotateZ(calc(6deg * 55));
+  display: none;
+}
+
+html .rose-wrapper .rose-petal:nth-of-type(55),
+body .rose-wrapper .rose-petal:nth-of-type(55) {
+  display: block;
+  width: 2px;
+}
+
+html .rose-wrapper .rose-petal:nth-of-type(55):after,
+body .rose-wrapper .rose-petal:nth-of-type(55):after {
+  height: 20px;
+  width: 2px;
+}
+
+html .rose-wrapper .rose-petal:nth-of-type(56),
+body .rose-wrapper .rose-petal:nth-of-type(56) {
+  -webkit-transform: rotateZ(calc(6deg * 56));
+          transform: rotateZ(calc(6deg * 56));
+  display: none;
+}
+
+html .rose-wrapper .rose-petal:nth-of-type(57),
+body .rose-wrapper .rose-petal:nth-of-type(57) {
+  -webkit-transform: rotateZ(calc(6deg * 57));
+          transform: rotateZ(calc(6deg * 57));
+  display: none;
+}
+
+html .rose-wrapper .rose-petal:nth-of-type(58),
+body .rose-wrapper .rose-petal:nth-of-type(58) {
+  -webkit-transform: rotateZ(calc(6deg * 58));
+          transform: rotateZ(calc(6deg * 58));
+  display: none;
+}
+
+html .rose-wrapper .rose-petal:nth-of-type(59),
+body .rose-wrapper .rose-petal:nth-of-type(59) {
+  -webkit-transform: rotateZ(calc(6deg * 59));
+          transform: rotateZ(calc(6deg * 59));
+  display: none;
+}
+
+html .rose-wrapper .rose-petal:nth-of-type(60),
+body .rose-wrapper .rose-petal:nth-of-type(60) {
+  -webkit-transform: rotateZ(calc(6deg * 60));
+          transform: rotateZ(calc(6deg * 60));
+  display: none;
+}
+
+html .rose-wrapper .rose-petal:nth-of-type(60),
+body .rose-wrapper .rose-petal:nth-of-type(60) {
+  display: block;
+  width: 2px;
+}
+
+html .rose-wrapper .rose-petal:nth-of-type(60):after,
+body .rose-wrapper .rose-petal:nth-of-type(60):after {
+  height: 20px;
+  width: 2px;
+}
+
+.stem {
+  position: absolute;
+  top: 80%;
+  left: 0px;
+  width: 80px;
+  height: 114px;
+  border: solid 3px #fff;
+  border-color: #fff transparent transparent transparent;
+  border-radius: 50%/15px 20px 0 0;
+  -webkit-transform: rotate(70deg);
+          transform: rotate(70deg);
+}
+
+.leaf {
+  position: absolute;
+  top: 90%;
+  left: 100px;
+  width: 20px;
+  height: 20px;
+  border: solid 3px #fff;
+  border-top-left-radius: 50%;
+  border-bottom-right-radius: 50%;
 }
 /*# sourceMappingURL=main.css.map */

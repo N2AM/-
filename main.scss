@@ -6,62 +6,84 @@ body {
   height: 100%;
 
   .rose-wrapper {
+    width: 100%;
     height: 100%;
-    background: black;
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0px;
-    margin: 0px;
-    .rose-petal {
+    background-color: black;
+    .rose-circle {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
       position: relative;
-      height: 20px;
-      width: 1px;
-      margin: 3px;
-      background: white;
-      border: 2px solid;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 10;
+    }
+    .rose-petal {
+      position: absolute;
+      left: calc(50% - 1px);
+      width: 2px;
+      transform-origin: bottom center;
+      z-index: 2;
+      background: none;
+      height: 40px;
+      top: 15px;
+      opacity: 1;
+      color: white;
+
+      &:after {
+        content: "";
+        position: absolute;
+        width: 2px;
+        height: 7px;
+        background: white;
+        left: 0;
+        top: 0;
+      }
+      @for $i from 1 through 60 {
+        &:nth-of-type(#{$i}) {
+          transform: rotateZ(calc(6deg * #{$i}));
+          display: none;
+        }
+        @if $i % 5 == 0 {
+          &:nth-of-type(#{$i}) {
+            display: block;
+
+            width: 2px;
+            &:after {
+              //              background-color: darken($base-color, $i / 10 * 1%) !important;
+
+              height: 20px;
+              width: 2px;
+            }
+          }
+        }
+      }
     }
   }
 }
-@for $i from 1 through 12 {
-  .rose-petal:nth-child(#{$i}) {
-    background-color: darken($base-color, $i * 3%) !important;
-  }
+.stem {
+  position: absolute;
+  top: 80%;
+  left: 0px;
+  width: 80px;
+  height: 114px;
+  border: solid 3px #fff;
+  border-color: #fff transparent transparent transparent;
+  border-radius: 50%/15px 20px 0 0;
+  transform: rotate(70deg);
 }
-@for $i from 1 through 12 {
-  .rose-petal:nth-child(#{$i}) {
-    transform: rotate($i * 30deg) skewY(-60deg);
-  }
-}
-.rose-petal:nth-child(3),
-.rose-petal:nth-child(9) {
-  top: 25px;
-}
-.rose-petal:nth-child(4),
-.rose-petal:nth-child(8) {
-  top: 13px;
-}
-.rose-petal:nth-child(2),
-.rose-petal:nth-child(10) {
-  top: 45px;
-}
-.rose-petal:nth-child(2) {
-  left: 10px;
-}
-.rose-petal:nth-child(10) {
-  left: -10px;
-}
-.rose-petal:nth-child(1),
-.rose-petal:nth-child(11) {
-  top: 60px;
-}
-.rose-petal:nth-child(1) {
-  left: 30px;
-}
-.rose-petal:nth-child(11) {
-  left: -30px;
-}
-.rose-petal:nth-child(12) {
-  top: 61px;
-  left: -65px;
+.leaf {
+  position: absolute;
+  top: 90%;
+  left: 100px;
+  width: 20px;
+  height: 20px;
+  border: solid 3px #fff;
+  border-top-left-radius: 50%;
+  border-bottom-right-radius: 50%;
 }
